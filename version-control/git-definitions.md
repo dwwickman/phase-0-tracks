@@ -17,3 +17,5 @@
 * What is a merge conflict?
 
  * If 2 people work on the same line of code and try merging them this is when a merge conflict typically happens.  There is no way to tell what version should be accepted and this is why the conflict happens.
+
+ Add
