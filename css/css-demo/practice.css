@@ -1,0 +1,21 @@
+#contact-info {
+	font-size: .8em;
+}
+.job {
+	background-color: #e9e5dc;
+	border-radius: 15px;
+	padding: 5px;
+	margin-bottom: 5px; 
+}
+.list {
+	font-size: .8em;
+}
+
+ol > li {
+	color: red;
+}
+/* 1.  * The Cascading in CSS means that styles can fall (or cascade) from one style sheet to another, enabling multiple style sheets to be used on one HTML document. When there is a conflict between two or more CSS rules that select the same element, the browser decides which rule to use determined by CSS specificity.
+
+* 2.  A CSS pseudo-class is a keyword added to selectors that specifies a special state of the element to be selected. For example :hover will apply a style when the user hovers over the element specified by the selector.
+
+* 3.  You can select child elements inside another element by using the element > element selector.
