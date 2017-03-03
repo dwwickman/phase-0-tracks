@@ -1,18 +1,19 @@
-.container {
-	border: 10px solid red;
+#container {
 	position: relative;
-	padding: 200px;
+	margin-left: 50%;
+	top: 150px;
 }
-.octopus {
-	border: 10px solid orange;
+#octopus {
 	position: absolute;
 }
-.glasses {
-	border: 10px solid blue;
+#glasses {
 	position: absolute;
+	left: 30px;
+	top: 105px;
 }
 
-.hat {
-	border: 10px solid green;
+#hat {
 	position: absolute;
+	top: -80px;
+	left: -15px;
 }
