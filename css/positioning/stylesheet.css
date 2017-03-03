@@ -3,19 +3,16 @@
 	position: relative;
 	padding: 200px;
 }
-.center {
+.octopus {
 	border: 10px solid orange;
 	position: absolute;
-	margin-left: 50%;
-	top: 125px;
 }
-.center-middle {
+.glasses {
 	border: 10px solid blue;
 	position: absolute;
-	left: 52%;
-	top: 145%;
 }
 
-.center-top {
+.hat {
 	border: 10px solid green;
+	position: absolute;
 }
