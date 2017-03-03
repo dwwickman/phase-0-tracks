@@ -1,18 +1,18 @@
-.container {
+#container {
 	border: 10px solid red;
 	position: relative;
 	padding: 200px;
 }
-.octopus {
+#octopus {
 	border: 10px solid orange;
 	position: absolute;
 }
-.glasses {
+#glasses {
 	border: 10px solid blue;
 	position: absolute;
 }
 
-.hat {
+#hat {
 	border: 10px solid green;
 	position: absolute;
 }
