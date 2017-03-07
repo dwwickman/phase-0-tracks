@@ -33,3 +33,17 @@ p garlic_bread_wanted
 p health_insurance_resonse
 p health_insurance_wanted
 
+if name == "Drake Cula" || name == "Tu Fang"
+	puts "defintely a vampire"
+elsif !correct_age && !garlic_bread_wanted && !health_insurance_wanted
+	puts "Almost certainly a vampire"
+elsif !correct_age && (!garlic_bread_wanted || !health_insurance_wanted)
+	puts "Probably a vampire"
+elsif correct_age && (garlic_bread_wanted || health_insurance_wanted)
+	puts "Probably not a vampire"
+else
+	puts "Results inconclusive"
+end
+
+
+
