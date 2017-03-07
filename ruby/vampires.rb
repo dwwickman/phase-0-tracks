@@ -1,3 +1,8 @@
+puts "How many employees will be Interveiwed?"
+number_interviewed = gets.chomp.to_i
+interview_count = 1
+
+while interview_count <= number_interviewed
 puts "What is your name?"
 name = gets.chomp
 puts "How old are you?"
@@ -34,15 +39,22 @@ p health_insurance_resonse
 p health_insurance_wanted
 
 if name == "Drake Cula" || name == "Tu Fang"
+	puts "Interview Canidate:  #{interview_count}"
 	puts "defintely a vampire"
 elsif !correct_age && !garlic_bread_wanted && !health_insurance_wanted
+	puts "Interview Canidate:  #{interview_count}"
 	puts "Almost certainly a vampire"
 elsif !correct_age && (!garlic_bread_wanted || !health_insurance_wanted)
+	puts "Interview Canidate:  #{interview_count}"
 	puts "Probably a vampire"
 elsif correct_age && (garlic_bread_wanted || health_insurance_wanted)
+	puts "Interview Canidate:  #{interview_count}"
 	puts "Probably not a vampire"
 else
+	puts "Interview Canidate:  #{interview_count}"
 	puts "Results inconclusive"
+end
+interview_count = interview_count + 1
 end
 
 
