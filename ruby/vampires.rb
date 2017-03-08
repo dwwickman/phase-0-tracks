@@ -40,15 +40,6 @@ while interview_count <= number_interviewed
 			allergy_loop = false
 		end
 	end
-p name
-p age
-p year_born
-p correct_age
-p garlic_bread_response
-p garlic_bread_wanted
-p health_insurance_resonse
-p health_insurance_wanted
-
 if name == ("Drake Cula" || name == "Tu Fang") && !allergy_sunshine
 	puts "Interview Canidate:  #{interview_count}"
 	puts "defintely a vampire"
