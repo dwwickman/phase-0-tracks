@@ -1,9 +1,9 @@
 puts "How many employees will be Interveiwed?"
 number_interviewed = gets.chomp.to_i
 interview_count = 1
-allergy_loop = true
 
 while interview_count <= number_interviewed
+	allergy_loop = true
 	puts "What is your name?"
 	name = gets.chomp
 	puts "How old are you?"
@@ -67,6 +67,7 @@ else
 end
 interview_count = interview_count + 1 
 end
+puts "Actually, nevermind! What do these questions have to do with anything? Lets all be freinds"
 
 
 
