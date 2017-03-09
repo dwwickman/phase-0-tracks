@@ -1,3 +1,27 @@
 body {
 	background-color: blue;
 }
+header {
+	background-color: pink;
+	padding: 20px;
+}
+footer {
+	background-color: yellow;
+	padding: 20px;
+	font-style: "Times New Roman";
+	color: red;
+}
+.column-1 {
+	background-color: purple;
+	display: table-cell;
+	vertical-align: top;
+	width: 45%;
+	padding: 20px;
+}
+.column-2 {
+	background-color: grey;
+	display: table-cell;
+	vertical-align: top;
+	width: 45%;
+	padding: 20px;
+}
