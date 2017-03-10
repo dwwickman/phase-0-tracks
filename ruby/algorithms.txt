@@ -1,0 +1,25 @@
+wait for door to open
+walk into elevator
+turn around
+find button panel (it'll be to the left or right of the door)
+locate the the number 1(this will be in the bottom left or bottom right corner of the panel.
+from here you'll move hoziontally, the next button will be button 2, once you reach the last button of the row move up one row and move horizontally in the other direction.  Do this until the button number matches the the floor number youre suppose to get off on.
+press the button
+wait til the elevetor says you've reached the selected floor number
+wait for the doors to open.
+exit
+
+
+making pb&j
+grab loaf of bred.
+pull out 2 slices of bred.
+grab knife.
+open peanut butter.
+put knife into butter.
+spread peanut butter onto one slice of bred.
+grab another knife.
+open jelly/jam container
+put knife into container
+spread onto slice of bred.
+put both knifes in dishwasher.
+enjoy sandwich.
