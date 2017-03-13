@@ -1,3 +1,4 @@
+
 application = {}
 
 puts "Enter Name:"
@@ -40,3 +41,44 @@ puts "'email for email"
 puts "'start_immediately' for start immediately"
 
 change_response = gets.chomp
+
+if change_response == "none"
+	puts "no change requested"
+
+elsif change_response == "name"
+	puts "Update Value:"
+	application[change_response.to_sym] = gets.chomp
+
+elsif change_response == "age"
+	puts "Update Value:"
+	application[change_response.to_sym] = gets.chomp.to_i
+
+elsif change_response == "number_of_children"
+	puts "Update Value:"
+	application[change_response.to_sym] = gets.chomp.to_i
+
+elsif change_response == "decor_theme"
+	puts "Update Value:"
+	application[change_response.to_sym] = gets.chomp
+
+elsif change_response == "address"
+	puts "Update Value:"
+	application[change_response.to_sym] = gets.chomp
+
+
+elsif change_response == "email"
+	puts "Update Value:"
+	application[change_response.to_sym] = gets.chomp
+
+
+elsif change_response == "start_immediately"
+	puts "Update Value"
+	if gets.chomp == "yes"
+		application[:start_immediately] = true
+	else
+		application[:start_immediately] = false
+	end
+end
+
+p application
+
