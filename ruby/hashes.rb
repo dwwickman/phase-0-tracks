@@ -27,3 +27,16 @@ else
 end
 
 p application
+
+
+puts "Would you like to update any information?"
+puts "'none' to skip"
+puts "'name' for name"
+puts "'age' for age"
+puts "'number_of_children' for number of children"
+puts "'decor_theme' for decor theme"
+puts "'address' for address"
+puts "'email for email"
+puts "'start_immediately' for start immediately"
+
+change_response = gets.chomp
