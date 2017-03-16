@@ -2,13 +2,11 @@
 # make 4 strings to check if its equal to anything in any of the strings.  Make excpeitons for last letters of strings "Z", "z", "U", and "u".
 
 def alias_name(name)
-
 	vowels = "aeiou"
 	vowels_caps = "AEIOU"
 	consonants = "bcdfghjklmnpqrstvwxyz"
 	consonants_caps = "BCDFGHJKLMNPQRSTVWXYZ"
 
-	name_hash = {}
 
 	name_split = name.split(' ')
 	reverse_name = ""
@@ -92,17 +90,28 @@ while index < alias_name.length
 	index += 1
 end
 
-
+alias_name
 
 end
+
+
+name_hash = {}
 
 loop do
 
 puts "Please enter a name.  'quit to stop'"
 name = gets.chomp
+
+
 if name == "quit"
 	break
 else
-puts "Alias: #{alias_name(name)}"
+name_hash[name] = alias_name(name)
 end
 end
+
+
+name_hash.each do |original_name, alias_name|
+puts "#{alias_name} is actually #{original_name}"
+end
+
