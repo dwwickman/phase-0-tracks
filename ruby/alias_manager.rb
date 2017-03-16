@@ -95,4 +95,13 @@ name
 
 end
 
-puts "Alias 2: #{alias_name("Felicia Torres")}"
+loop do
+
+puts "Please enter a name.  'quit to stop'"
+name = gets.chomp
+if name == "quit"
+	break
+else
+puts "Alias 2:  #{alias_name(name)}"
+end
+end
