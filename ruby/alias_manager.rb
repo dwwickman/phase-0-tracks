@@ -2,19 +2,20 @@
 # make 4 strings to check if its equal to anything in any of the strings.  Make excpeitons for last letters of strings "Z", "z", "U", and "u".
 
 def alias_name(name)
-vowels = "aeiou"
-vowels_caps = "AEIOU"
-consonants = "bcdfghjklmnpqrstvwxyz"
-consonants_caps = "BCDFGHJKLMNPQRSTVWXYZ"
 
-puts "Orignal Name:  #{name}"
+	vowels = "aeiou"
+	vowels_caps = "AEIOU"
+	consonants = "bcdfghjklmnpqrstvwxyz"
+	consonants_caps = "BCDFGHJKLMNPQRSTVWXYZ"
 
-name_split = name.split(' ')
-reverse_name = ""
-name_split.reverse_each {|word| reverse_name += "#{word} " }
-name = reverse_name[0...-1]
+	puts "Orignal Name:  #{name}"
 
-puts "Alias 1:  #{name}"
+	name_split = name.split(' ')
+	reverse_name = ""
+	name_split.reverse_each {|word| reverse_name += "#{word} " }
+	name = reverse_name[0...-1]
+
+	puts "Alias 1:  #{name}"
 
 # checks to see if consantant and lower case
 index = 0
@@ -91,6 +92,7 @@ while index < name.length
 end
 
 name
+
 end
 
 puts "Alias 2: #{alias_name("Felicia Torres")}"
