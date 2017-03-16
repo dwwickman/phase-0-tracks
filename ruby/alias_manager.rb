@@ -8,25 +8,26 @@ def alias_name(name)
 	consonants = "bcdfghjklmnpqrstvwxyz"
 	consonants_caps = "BCDFGHJKLMNPQRSTVWXYZ"
 
-	puts "Orignal Name:  #{name}"
+	name_hash = {}
 
 	name_split = name.split(' ')
 	reverse_name = ""
 	name_split.reverse_each {|word| reverse_name += "#{word} " }
-	name = reverse_name[0...-1]
 
-	puts "Alias 1:  #{name}"
+	alias_name = reverse_name[0...-1]
+
+
 
 # checks to see if consantant and lower case
 index = 0
-while index < name.length
+while index < alias_name.length
 	consonants_index = 0
 	while consonants_index < consonants.length
-		if name[index] == "z"
-			name[index] = "b"
+		if alias_name[index] == "z"
+			alias_name[index] = "b"
 			consonants_index = 21
-		elsif name[index] == consonants[consonants_index]
-			name[index] = consonants[consonants_index + 1]
+		elsif alias_name[index] == consonants[consonants_index]
+			alias_name[index] = consonants[consonants_index + 1]
 			consonants_index = 21
 		else
 			consonants_index += 1
@@ -39,14 +40,14 @@ end
 ## checks to see if constant and upper case
 
 index = 0
-while index < name.length
+while index < alias_name.length
 	consonants_caps_index = 0
 	while consonants_caps_index < consonants_caps.length
-		if name[index] == "Z"
-			name[index] = "B"
+		if alias_name[index] == "Z"
+			alias_name[index] = "B"
 			consonants_caps_index = 21
-		elsif name[index] == consonants_caps[consonants_caps_index]
-			name[index] = consonants_caps[consonants_caps_index + 1]
+		elsif alias_name[index] == consonants_caps[consonants_caps_index]
+			alias_name[index] = consonants_caps[consonants_caps_index + 1]
 			consonants_caps_index = 21
 		else
 			consonants_caps_index += 1
@@ -58,14 +59,14 @@ end
 ## checks to see if vowel and lower case
 
 index = 0
-while index < name.length
+while index < alias_name.length
 	vowels_index = 0
 	while vowels_index < vowels.length
-		if name[index] == "u"
-			name[index] = "a"
+		if alias_name[index] == "u"
+			alias_name[index] = "a"
 			vowels_index = 21
-		elsif name[index] == vowels[vowels_index]
-			name[index] = vowels[vowels_index + 1]
+		elsif alias_name[index] == vowels[vowels_index]
+			alias_name[index] = vowels[vowels_index + 1]
 			vowels_index = 21
 		else
 			vowels_index += 1
@@ -75,14 +76,14 @@ while index < name.length
 end
 
 index = 0
-while index < name.length
+while index < alias_name.length
 	vowels_caps_index = 0
 	while vowels_caps_index < vowels_caps.length
-		if name[index] == "U"
-			name[index] = "A"
+		if alias_name[index] == "U"
+			alias_name[index] = "A"
 			vowels_caps_index = 21
-		elsif name[index] == vowels_caps[vowels_caps_index]
-			name[index] = vowels_caps[vowels_caps_index + 1]
+		elsif alias_name[index] == vowels_caps[vowels_caps_index]
+			alias_name[index] = vowels_caps[vowels_caps_index + 1]
 			vowels_caps_index = 21
 		else
 			vowels_caps_index += 1
@@ -91,7 +92,7 @@ while index < name.length
 	index += 1
 end
 
-name
+
 
 end
 
@@ -102,6 +103,6 @@ name = gets.chomp
 if name == "quit"
 	break
 else
-puts "Alias 2:  #{alias_name(name)}"
+puts "Alias: #{alias_name(name)}"
 end
 end
