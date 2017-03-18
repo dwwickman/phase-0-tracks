@@ -1,3 +1,13 @@
+#make an empty hash to store values
+#ask user to input and store values
+#convert number strongs to numbers using to_i method
+#convert boolean to boolean using if == yes
+#print applicaiton
+#Ask user if they would like to change response - if == none skip
+#if statment for if equal to what they want to change
+#use to symbol method to access the key youw want to change
+# print updated application
+
 
 application = {}
 
