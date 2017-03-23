@@ -18,8 +18,16 @@ end
 
 end
 
-og_santa = Santa.new("agender", "mystical creature")
+#og_santa = Santa.new("agender", "mystical creature")
 
-og_santa.speak
-og_santa.eat_milk_and_cookies("Chocolate Chip")
+#og_santa.speak
+#og_santa.eat_milk_and_cookies("Chocolate Chip")
+
+santas = []
+santas_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+santas_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+santas_genders.length.times do |i|
+  santas << Santa.new(santas_genders[i], santas_ethnicities[i])
+end
+
 
