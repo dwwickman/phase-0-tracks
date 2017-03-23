@@ -7,17 +7,16 @@
   # value of the key will be default quantity = 1 
   # print the list to the console using print method. 
   
-def create(list_str)
-	grocery_list = {}
-	list_array = list_str.split(" ")
+  def create(list_str)
+  	grocery_list = {}
+  	list_array = list_str.split(" ")
 
-	list_array.map! do |item|
-		grocery_list[item] = 1 
-	end
-	p grocery_list
-	print_list(grocery_list)
-	grocery_list
-end 
+  	list_array.map! do |item|
+  		grocery_list[item] = 1 
+  	end
+  	print_list(grocery_list)
+  	grocery_list
+  end 
 
 #create("carrots apples cereal pizza")
 
@@ -30,10 +29,10 @@ end
 		#quantity => key's value 
 # output: the hash list
 
-def add(item_name, quantity, grocery_list)
-  grocery_list[item_name] = quantity
-  print_list(grocery_list)
-  grocery_list
+def add(grocery_list, item_name, quantity)
+	grocery_list[item_name] = quantity
+	p grocery_list
+	grocery_list
 end
 
 
@@ -50,8 +49,8 @@ end
 
 
 def remove(grocery_list, item_name)
-  grocery_list.delete(item_name)
-  grocery_list
+	grocery_list.delete(item_name)
+	grocery_list
 end
 
 #remove(grocery_list, "burger")
@@ -66,9 +65,8 @@ end
 
 
 def update(grocery_list, item_name, quantity)
-  grocery_list[item_name] = quantity
-  print_list(grocery_list)
-  grocery_list
+	grocery_list[item_name] = quantity
+	grocery_list
 end
 
 #update(grocery_list, "burger", 3)
@@ -81,10 +79,14 @@ end
 # output: the hash list 
 
 def print_list(grocery_list)
-  puts "This is your grocery list:"
-  grocery_list.each do |item, quantity|
-    puts "#{item}: #{quantity}"
-  end
+	if grocery_list.length == 0
+		puts "your grocery list is empty"
+	else
+		puts "This is your grocery list:"
+		grocery_list.each do |item, quantity|
+			puts "#{item}: #{quantity}"
+		end
+	end
 end
 
 #grocery_list = {"carrots"=>1, "apples"=>1, "cereal"=>1, "pizza"=>1}
@@ -94,7 +96,13 @@ end
 ###Driver Code
 
 
-create("carrots apples cereal pizza")
+create("")
+#add(grocery_list, "Lemonade", 2)
+#add(grocery_list, "Tomatoes", 3)
+#add(grocery_list, "Onions", 1)
+#add(grocery_list, "Ice Cream", 4)
+#print_list(grocery_list)
+
 
 
 
