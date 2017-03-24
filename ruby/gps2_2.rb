@@ -89,19 +89,39 @@ def print_list(grocery_list)
 	end
 end
 
-#grocery_list = {"carrots"=>1, "apples"=>1, "cereal"=>1, "pizza"=>1}
+#grocery_list = {}
 
 #print_list(grocery_list)
 
 ###Driver Code
 
 
-create("")
-#add(grocery_list, "Lemonade", 2)
-#add(grocery_list, "Tomatoes", 3)
-#add(grocery_list, "Onions", 1)
-#add(grocery_list, "Ice Cream", 4)
-#print_list(grocery_list)
+actual_grocery_list = create("")
+add(actual_grocery_list, "Lemonade", 2)
+add(actual_grocery_list, "Tomatoes", 3)
+add(actual_grocery_list, "Onions", 1)
+add(actual_grocery_list, "Ice Cream", 4)
+print_list(actual_grocery_list)
+
+puts "------------"
+
+remove(actual_grocery_list, "Lemonade")
+print_list(actual_grocery_list)
+
+puts "-----------"
+
+update(actual_grocery_list, "Ice Cream", 1)
+print_list(actual_grocery_list)
+
+=begin
+	
+* I learned that if you pseudocode correctly and in detail it can save you a lot of time writing actual code
+* An array would allow you to store each item but a hash allows you to store quantity as well
+* Whatever is on the last line of code
+* varables, strings, return methods can be passed
+* you can call a method from another method
+* I was confused about how to return a value and pass that along to another method.
+
 
 
 
