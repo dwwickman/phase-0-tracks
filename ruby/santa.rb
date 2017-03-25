@@ -36,7 +36,7 @@ class Santa
 	end
 
 	def celebrate_birthday
-		@age =+ 1
+		@age += 1
 	end
 
 	def get_mad_at(reindeer)
@@ -76,8 +76,8 @@ end
 
 	puts santas[0].speak
 	puts santas[0].eat_milk_and_cookies("Chocolate Chip")
-	puts santas[0].celebrate_birthday
 	puts santas[0].age
+	puts santas[0].celebrate_birthday
 	puts santas[0].reindeer_ranking
 	puts "-----------"
 	puts santas[0].get_mad_at("Vixen")
