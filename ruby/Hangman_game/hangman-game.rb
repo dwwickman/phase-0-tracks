@@ -9,7 +9,7 @@ User 2 loses if guesses > secret word LENGtH
 User 2 wins if guesses secret word
 Each correct guess fills in the blank letters
 	
-end
+=end
 
 
 
