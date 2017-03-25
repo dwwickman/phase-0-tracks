@@ -1,5 +1,8 @@
 class Santa
 
+	attr_accessor :age, :gender
+	attr_reader :ethnicity, :reindeer_ranking
+
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance..."
 		@gender = gender
@@ -48,18 +51,39 @@ end
 #og_santa.speak
 #og_santa.eat_milk_and_cookies("Chocolate Chip")
 
-santas = []
 santas_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 santas_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
-santas_genders.length.times do |i|
-	santas << Santa.new(santas_genders[i], santas_ethnicities[i])
-end
+#santas_genders.length.times do |i|
+#	santas << Santa.new(santas_genders[i], santas_ethnicities[i])
+#end
+
+santas = []
+
 
 250.times do
-	puts new_santa = Santa.new[santas_genders.sample, santas_ethnicities.sample]
-	puts new_santa.age = rand(141)
-	puts new_santa.ethnicity
-	puts new_santa.gender
-	puts new_santa.speak
-	puts new_santa.eat_milk_and_cookies("Chocolate Chip")
+	new_santa = Santa.new(santas_genders.sample, santas_ethnicities.sample)
+	new_santa.age = rand(141)
+	#puts new_santa.age
+	#puts new_santa.gender
+	#puts new_santa.ethnicity
+	santas << new_santa
+end
+
+
+
+
+
+	puts santas[0].speak
+	puts santas[0].eat_milk_and_cookies("Chocolate Chip")
+	puts santas[0].celebrate_birthday
+	puts santas[0].age
+	puts santas[0].reindeer_ranking
+	puts "-----------"
+	puts santas[0].get_mad_at("Vixen")
+
+
+
+
+
+
