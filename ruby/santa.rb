@@ -13,19 +13,19 @@ class Santa
 
 	#getter methods
 
-	def age
-		@age
-	end
+	#def age
+	#	@age
+	#end
 
-	def ethnicity
-		@ethnicity
-	end
+	#def ethnicity
+	#	@ethnicity
+	#end
 
 	#setter methods
 
-	def gender=(new_gender)
-		@gender = gender
-	end
+	#def gender=(new_gender)
+	#	@gender = gender
+	#end
 
 	def speak
 		puts "Ho, ho, ho!  Haaappy holidays!"
