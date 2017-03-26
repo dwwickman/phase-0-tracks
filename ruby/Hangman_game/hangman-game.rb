@@ -17,13 +17,17 @@ Each correct guess fills in the blank letters
 
 
 class Hangman
-	attr_reader :chances, :secret, :guessed_word, :guessed_letters
+	attr_reader :chances, :secret_word, :word_guessed, :correct_letters_guessed, :wrong_letters_guessed
 
-def initialize(secret)
-	@chances = secret.length
-	@ secret = secret.downcase!
-	@guessed_word = ["_"] * secret.length
-	@guessed_letters = []
+def initialize(secret_word)
+
+	@secret_word = secret_word.downcase!
+	@chances = secret_word.length
+	@correct_letters_guessed = []
+	@wrong_letters_guessed = []
+	@word_guessed = false
+	
+	
 	
 end
 
@@ -39,6 +43,6 @@ end
 end
 
 
-secret = "elephant"
+secret_word = "elephant"
 
 game = Hangman.new(secret)
