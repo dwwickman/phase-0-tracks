@@ -31,7 +31,29 @@ class Hangman
 	end
 
 	def correct_guess(letter)
+
+		if @correct_letters_guessed.include?(letter)
+			puts "You already guessed this correct letter"
+			@encrypted_word
+		elsif @secret_word.include?(letter)
+			@correct_letters_guessed << letter
+			correct_letter(letter)
+		end
 	end
+
+	def correct_letter(letter)
+
+		counter = 0
+		while counter < secret_word.length
+			if @secret_word[counter] == letter
+				@encrypted_word[counter] = letter
+			end
+			counter += 1
+		end
+		@encrypted_word
+	end
+
+
 
 	def incorrect_guess(letter)
 
@@ -41,6 +63,14 @@ class Hangman
 		elsif !@secret_word.include?(letter)
 			@wrong_letters_guessed << letter
 			@chances -= 1
+		end
+	end
+
+	def finish_game
+		if @chances == 0
+			@game_over = true
+		elsif @encrypted_word == secret_word
+			@game_over = true
 		end
 	end
 

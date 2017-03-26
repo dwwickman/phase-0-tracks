@@ -33,7 +33,17 @@ describe Hangman do
 		expect(game.chances).to eq 3
 	end
 
-	it "chekcs if letter is put into wrong letters guessed array" do
+	it "checks to see if correct letter was passed into correct letters guessed array" do
+		game.correct_guess("e")
+		expect(game.correct_letters_guessed).to eq ["e"]
+end
+
+	it "checks to see if correct guess goes into encrypted_word" do
+		expect(game.correct_letter("t")).to eq "t__t"
+
+		end
+
+	it "checks if letter is put into wrong letters guessed array" do
 
 		game.incorrect_guess("a")
 		expect(game.wrong_letters_guessed).to eq ["a"]
