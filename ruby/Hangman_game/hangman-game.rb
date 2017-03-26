@@ -17,32 +17,36 @@ Each correct guess fills in the blank letters
 
 
 class Hangman
-	attr_reader :chances, :secret_word, :word_guessed, :correct_letters_guessed, :wrong_letters_guessed
+	attr_reader :chances, :secret_word, :game_over, :correct_letters_guessed, :wrong_letters_guessed, :encrypted_word
 
-def initialize(secret_word)
+	def initialize(secret_word)
 
-	@secret_word = secret_word.downcase!
-	@chances = secret_word.length
-	@correct_letters_guessed = []
-	@wrong_letters_guessed = []
-	@word_guessed = false
-	
-	
-	
+		@secret_word = secret_word.downcase
+		@chances = secret_word.length
+		@correct_letters_guessed = []
+		@wrong_letters_guessed = []
+		@encrypted_word = "_" * secret_word.split(//).length
+		@game_over = false
+
+	end
+
+	def correct_guess(letter)
+	end
+
+	def incorrect_guess(letter)
+
+		if @wrong_letters_guessed.include?(letter)
+			puts "Sorry...You already gussed that letter"
+			@encrypted_word
+		elsif !@secret_word.include?(letter)
+			@wrong_letters_guessed << letter
+			@chances -= 1
+		end
+	end
+
 end
 
-def update_chances_left
-	put code here
-end
 
-def duplicate?(guess)
-	@guessed_letters.include?(guess)
-	
-end
+#secret_word = "test"
 
-end
-
-
-secret_word = "elephant"
-
-game = Hangman.new(secret)
+#game = Hangman.new(secret_word)
