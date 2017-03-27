@@ -1,0 +1,47 @@
+
+User 1 inputs a "secret word"
+Word will be hidden with "_" 
+User 2 has to guess secret word
+User 2 gets the same amount of missed guesses and secret word LENGTH
+User 2 doesn't get a missed guessed if letter is already guessed
+User 2 loses if guesses > secret word LENGtH
+User 2 wins if guesses secret word
+Each correct guess fills in the blank letters
+
+initalize method:
+
+input: secret_word
+
+variable for secret word
+variable for chances = secret word LENGTH
+variable for array of correct guessed leters
+variable for array of incorrect guessed letters
+variable for encrypt array. legnth of secret word in "_"
+boolean variable for game over.
+
+method to check correct letter
+
+input:  letter
+
+if variable is in secret word and not in correct letter
+add letter to correct gussed letter array
+add letter in the correct location of encrypted array (call antoher method)
+
+update encrypted word method:
+
+input: letter
+
+loop through secret word to see if letter guessed is equal to each leter
+if its equal replace that index in the ecrypted
+
+output: ecypted word
+
+method to check incorrect letter
+
+input:  letter
+
+if varabile is not in secret word and not incorrect letter array
+add letter to incorrect letter guessed
+decrease chances by one
+
+me
