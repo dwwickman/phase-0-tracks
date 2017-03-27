@@ -17,12 +17,14 @@ Each correct guess fills in the blank letters
 
 
 class Hangman
-	attr_reader :chances, :secret_word, :game_over, :correct_letters_guessed, :wrong_letters_guessed, :encrypted_word
+
+	attr_reader :chances, :secret_word, :correct_letters_guessed, :wrong_letters_guessed, :encrypted_word
+	attr_accessor :game_over
 
 	def initialize(secret_word)
 
 		@secret_word = secret_word.downcase
-		@chances = secret_word.length
+		@chances = @secret_word.length
 		@correct_letters_guessed = []
 		@wrong_letters_guessed = []
 		@encrypted_word = "_" * secret_word.split(//).length
@@ -66,17 +68,43 @@ class Hangman
 		end
 	end
 
-	def finish_game
-		if @chances == 0
-			@game_over = true
-		elsif @encrypted_word == secret_word
-			@game_over = true
+end
+
+#UI
+
+
+puts "Player 1:  Enter a word"
+
+secret_word = gets.chomp
+
+game = Hangman.new(secret_word)
+
+puts "Player 2:  Try and Guess the word:"
+puts game.encrypted_word
+
+while !game.game_over
+
+	puts "Player 2:  Enter a letter:"
+	letter_input = gets.chomp
+
+	if game.incorrect_guess(letter_input)
+
+		puts "WRONG GUESS!!!! You have #{game.chances} left"
+		puts game.encrypted_word
+		if game.chances == 0
+			puts "YOU LOST"
+			game.game_over = true
+		end
+	elsif game.correct_letter(letter_input)
+		puts "GOOD GUESS You have #{game.chances} left"
+		puts game.encrypted_word
+		if game.encrypted_word == secret_word
+			puts "YOU NAILED IT"
+			game.game_over = true
 		end
 	end
 
+
 end
 
-
-#secret_word = "test"
-
-#game = Hangman.new(secret_word)
+puts "Thank you for playing"
