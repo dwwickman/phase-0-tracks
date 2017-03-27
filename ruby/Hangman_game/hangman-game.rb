@@ -17,28 +17,94 @@ Each correct guess fills in the blank letters
 
 
 class Hangman
-	attr_reader :chances, :secret, :guessed_word, :guessed_letters
 
-def initialize(secret)
-	@chances = secret.length
-	@ secret = secret.downcase!
-	@guessed_word = ["_"] * secret.length
-	@guessed_letters = []
-	
+	attr_reader :chances, :secret_word, :correct_letters_guessed, :wrong_letters_guessed, :encrypted_word
+	attr_accessor :game_over
+
+	def initialize(secret_word)
+
+		@secret_word = secret_word.downcase
+		@chances = @secret_word.length
+		@correct_letters_guessed = []
+		@wrong_letters_guessed = []
+		@encrypted_word = "_" * secret_word.split(//).length
+		@game_over = false
+
+	end
+
+	def correct_guess(letter)
+
+		if @correct_letters_guessed.include?(letter)
+			puts "You already guessed this correct letter"
+			@encrypted_word
+		elsif @secret_word.include?(letter)
+			@correct_letters_guessed << letter
+			correct_letter(letter)
+		end
+	end
+
+	def correct_letter(letter)
+
+		counter = 0
+		while counter < secret_word.length
+			if @secret_word[counter] == letter
+				@encrypted_word[counter] = letter
+			end
+			counter += 1
+		end
+		@encrypted_word
+	end
+
+
+
+	def incorrect_guess(letter)
+
+		if @wrong_letters_guessed.include?(letter)
+			puts "Sorry...You already gussed that letter"
+			@encrypted_word
+		elsif !@secret_word.include?(letter)
+			@wrong_letters_guessed << letter
+			@chances -= 1
+		end
+	end
+
 end
 
-def update_chances_left
-	put code here
+#UI
+
+
+puts "Player 1:  Enter a word"
+
+secret_word = gets.chomp
+
+game = Hangman.new(secret_word)
+
+puts "Player 2:  Try and Guess the word:"
+puts game.encrypted_word
+
+while !game.game_over
+
+	puts "Player 2:  Enter a letter:"
+	letter_input = gets.chomp
+
+	if game.incorrect_guess(letter_input)
+
+		puts "WRONG GUESS!!!! You have #{game.chances} left"
+		puts game.encrypted_word
+		if game.chances == 0
+			puts "YOU LOST"
+			game.game_over = true
+		end
+	elsif game.correct_letter(letter_input)
+		puts "GOOD GUESS You have #{game.chances} left"
+		puts game.encrypted_word
+		if game.encrypted_word == secret_word
+			puts "YOU NAILED IT"
+			game.game_over = true
+		end
+	end
+
+
 end
 
-def duplicate?(guess)
-	@guessed_letters.include?(guess)
-	
-end
-
-end
-
-
-secret = "elephant"
-
-game = Hangman.new(secret)
+puts "Thank you for playing"
