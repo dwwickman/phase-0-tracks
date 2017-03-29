@@ -20,28 +20,40 @@ var array = ["long phraseasdfadsfasdfa","longest phrase","longer phrasexxxxxxx"]
 
 console.log(long(array));*/
 
+function compare(obj_one, obj_two) {
+var key_value_equal = false;
 var key_value_string = "";
 var array_one = []
 var array_two = []
-var obj_one = {a: 5, b: 7, c: 9};
-var obj_two = {d: 5, c: 2, a: 5};
+
 
 for (var [key, value] of Object.entries(obj_one)) {
      key_value_string = key + ' ' + value
      array_one.push(key_value_string);
 }
 
-console.log(array_one);
 
 for (var [key, value] of Object.entries(obj_two)) {
      key_value_string = key + ' ' + value
      array_two.push(key_value_string);
 }
 
-console.log(array_two);
+for (i = 0; i < array_one.length; i++) {
+	for (j = 0; j < array_one.length; j++) {
+		if (array_one[i] == array_two[j]) {
+			key_value_equal = true;
+		}
+	}
+}
+
+return key_value_equal
+}
 
 
+var obj_one = {a: 5, b: 7, c: 9};
+var obj_two = {d: 5, c: 2, a: 5};
 
+console.log(compare(obj_one, obj_two));
 
 
 function random_array(number) {
