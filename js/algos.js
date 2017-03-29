@@ -5,9 +5,7 @@
 //			if current word length is longer than previous length replace
 // output:  longest_word
 
-
-
-function long(array) {
+/*function long(array) {
 var longest_word = "";
 
 for (i = 0; i < array.length; i++) {
@@ -20,4 +18,37 @@ return longest_word
 
 var array = ["long phraseasdfadsfasdfa","longest phrase","longer phrasexxxxxxx"];
 
-console.log(long(array));
+console.log(long(array));*/
+
+var number = 3;
+
+console.log(number);
+
+var alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+console.log(alphabet);
+console.log(alphabet[4]);
+
+var n = Math.floor((Math.random() * 10) + 1);
+
+console.log(n);
+
+var alphabet_random = Math.floor(Math.random() * 26);
+
+console.log(alphabet_random);
+
+var array = [];
+
+console.log(array);
+
+
+
+
+
+
+
+
+
+
+
+
