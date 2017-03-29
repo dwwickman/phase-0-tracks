@@ -20,33 +20,28 @@ var array = ["long phraseasdfadsfasdfa","longest phrase","longer phrasexxxxxxx"]
 
 console.log(long(array));*/
 
-var number = 3;
-
-console.log(number);
+function random_array(number) {
 
 var alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-console.log(alphabet);
-console.log(alphabet[4]);
-
-var n = Math.floor((Math.random() * 10) + 1);
-
-console.log(n);
-
-var alphabet_random = Math.floor(Math.random() * 26);
-
-console.log(alphabet_random);
-
-var array = [];
-
-console.log(array);
+var array_letters = [];
 
 for (i = 0; i < number; i++) {
-	array.push("a")
+	var random_number = Math.floor((Math.random() * 10) + 1);
+	var string = "";
+	for (j = 0; j < random_number; j++ ) {
+		var alphabet_random = Math.floor(Math.random() * 26);
+		string += alphabet[alphabet_random];
+	}
+	array_letters.push(string);
+}
+return array_letters
 }
 
-console.log(array);
+number = 3
 
+
+console.log(random_array(number));
 
 
 
