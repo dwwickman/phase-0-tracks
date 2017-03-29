@@ -41,6 +41,12 @@ var array = [];
 
 console.log(array);
 
+for (i = 0; i < number; i++) {
+	array.push("a")
+}
+
+console.log(array);
+
 
 
 
