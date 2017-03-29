@@ -16,9 +16,9 @@ for (i = 0; i < array.length; i++) {
 return longest_word
 }
 
-var array = ["long phraseasdfadsfasdfa","longest phrase","longer phrasexxxxxxx"];
+//var array = ["long phraseasdfadsfasdfa","longest phrase","longer phrasexxxxxxx"];
 
-console.log(long(array));
+//console.log(long(array));
 
 function compare(obj_one, obj_two) {
 var key_value_equal = false;
@@ -53,7 +53,7 @@ return key_value_equal
 var obj_one = {a: 5, b: 7, c: 9};
 var obj_two = {d: 5, c: 2, a: 5};
 
-console.log(compare(obj_one, obj_two));
+//console.log(compare(obj_one, obj_two));
 
 
 function random_array(number) {
@@ -77,7 +77,13 @@ return array_letters
 number = 3
 
 
-console.log(random_array(number));
+//Driver code for printing 10 arrays and returning longest string in array
+for (k = 0; k < 10; k++) {
+array = random_array(number);
+console.log(array);
+console.log(long(array));
+}
+
 
 
 
