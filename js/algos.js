@@ -20,6 +20,30 @@ var array = ["long phraseasdfadsfasdfa","longest phrase","longer phrasexxxxxxx"]
 
 console.log(long(array));*/
 
+var key_value_string = "";
+var array_one = []
+var array_two = []
+var obj_one = {a: 5, b: 7, c: 9};
+var obj_two = {d: 5, c: 2, a: 5};
+
+for (var [key, value] of Object.entries(obj_one)) {
+     key_value_string = key + ' ' + value
+     array_one.push(key_value_string);
+}
+
+console.log(array_one);
+
+for (var [key, value] of Object.entries(obj_two)) {
+     key_value_string = key + ' ' + value
+     array_two.push(key_value_string);
+}
+
+console.log(array_two);
+
+
+
+
+
 function random_array(number) {
 
 var alphabet = "abcdefghijklmnopqrstuvwxyz"
@@ -41,7 +65,7 @@ return array_letters
 number = 3
 
 
-console.log(random_array(number));
+//console.log(random_array(number));
 
 
 
