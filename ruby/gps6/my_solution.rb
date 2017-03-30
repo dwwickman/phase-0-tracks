@@ -1,7 +1,7 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: @bredjenn ].
+# We spent 2[#] hours on this challenge.
 
 # EXPLANATION OF require_relative
 # require relative always the file to access code from another file in the same drirectory.  require you need a direct path to the file.
@@ -120,3 +120,9 @@ end
 
 #=======================================================================
 # Reflection Section
+
+# STATE_DATA uses both string and symbol syntax.  String looks nicer but it's not as fast for a computer ro run as a symbol
+# Require relative always the file to access code from another file in the same drirectory.  require you need a direct path to the file.
+# .each
+# That youre passing along instance variables that are readable in other methods
+# Refactoring.  I need practice refactoring and I think this helped.
