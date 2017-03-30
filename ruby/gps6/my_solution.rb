@@ -22,26 +22,39 @@ class VirusPredictor
   #Calls predicted_deaths and speed_of_spread methods
 
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
   end
 
   private
 
   #predcits the number of deaths based on a population density.
 
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
     # predicted deaths is solely based on population density
-    if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
-    elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
-    elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
-    elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
-    else
-      number_of_deaths = (@population * 0.05).floor
+    # if @population_density >= 200
+    #   number_of_deaths = (@population * 0.4).floor
+    # elsif @population_density >= 150
+    #   number_of_deaths = (@population * 0.3).floor
+    # elsif @population_density >= 100
+    #   number_of_deaths = (@population * 0.2).floor
+    # elsif @population_density >= 50
+    #   number_of_deaths = (@population * 0.1).floor
+    # else
+    #   number_of_deaths = (@population * 0.05).floor
+    # end
+
+    factor = 0.4
+    number_of_deaths = 0
+    200.step(50, -50) do |n|
+      if @population_density >= n
+        number_of_deaths = (@population * factor).floor
+        break
+      elsif @population_density < 50
+        number_of_deaths = (@population * 0.05).floor
+      else
+        factor -= 0.1
+      end
     end
 
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
@@ -50,7 +63,7 @@ class VirusPredictor
 
   #Predcits how long it'll take for a diesease to spread across a state in months.
 
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
