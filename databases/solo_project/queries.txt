@@ -60,6 +60,11 @@ Superhero|7.8
 Superhero|8.1
 Fairy Tale Adaptation|7.9
 
+sqlite> SELECT GENRE, RATING FROM tv_show FULL JOIN  network ON network.id = tv_show.network_id;;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+NOTE* Right and full outer join not supported
+
 sqlite> SELECT tv_show.name, network.name FROM tv_show JOIN network ON tv_show.network_id = network.id;
 Arrow|CW
 The Flash|CW
