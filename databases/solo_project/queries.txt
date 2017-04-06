@@ -1,19 +1,41 @@
 1.  Display the information in one table (either table is fine).
 
-
+sqlite> SELECT * FROM network
+   ...> ;
+1|CW
+2|USA
+3|ABC
 
 2.  Update an item that meets some condition (you can choose a condition that makes sense).
 
-
+sqlite> UPDATE tv_show SET genre="Fairy Tale Adaptation" WHERE name="Once Upon A Time";
+sqlite> SELECT * FROM tv_show;
+|Arrow|Superhero|true|7.8|1
+|The Flash|Superhero|true|8.1|1
+|Suits|Drama|true|8.7|2
+|Once Upon A Time|Fairy Tale Adaptation|true|7.9|3
 
 3. Display the information in both tables using one query.
 
-
+sqlite> SELECT * FROM tv_show, network WHERE tv_show.network_id = network.id;
+|Arrow|Superhero|true|7.8|1|1|CW
+|The Flash|Superhero|true|8.1|1|1|CW
+|Suits|Drama|true|8.7|2|2|USA
+|Once Upon A Time|Fairy Tale Adaptation|true|7.9|3|3|ABC
 
 4.  Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
 
-
+sqlite> SELECT tv_show.name, network.name FROM tv_show JOIN network ON tv_show.network_id = network.id;
+Arrow|CW
+The Flash|CW
+Suits|USA
+Once Upon A Time|ABC
 
 5.  Delete an item that meets some condition (you can choose a condition that makes sense).
 
+sqlite> DELETE FROM tv_show WHERE name="Suits";
+sqlite> SELECT * FROM tv_show;
+|Arrow|Superhero|true|7.8|1
+|The Flash|Superhero|true|8.1|1
+|Once Upon A Time|Fairy Tale Adaptation|true|7.9|3
 
