@@ -1,0 +1,40 @@
+Relase 2
+
+2. sqlite> select * from users, businesses, reviews;
+1|Bradford|Pitt|1|Grundy Hollow Wedding Chapel|1|2|Didn't work got divorced|1|2
+1|Bradford|Pitt|1|Grundy Hollow Wedding Chapel|2|5|Killed a Zomie here - GOOD TIMES|2|3
+1|Bradford|Pitt|1|Grundy Hollow Wedding Chapel|3|1|Sketchy and no music|3|3
+1|Bradford|Pitt|2|Amir's Towing|1|2|Didn't work got divorced|1|2
+1|Bradford|Pitt|2|Amir's Towing|2|5|Killed a Zomie here - GOOD TIMES|2|3
+1|Bradford|Pitt|2|Amir's Towing|3|1|Sketchy and no music|3|3
+1|Bradford|Pitt|3|The Beagle Nightclub|1|2|Didn't work got divorced|1|2
+1|Bradford|Pitt|3|The Beagle Nightclub|2|5|Killed a Zomie here - GOOD TIMES|2|3
+1|Bradford|Pitt|3|The Beagle Nightclub|3|1|Sketchy and no music|3|3
+2|Mandy|Kaling|1|Grundy Hollow Wedding Chapel|1|2|Didn't work got divorced|1|2
+2|Mandy|Kaling|1|Grundy Hollow Wedding Chapel|2|5|Killed a Zomie here - GOOD TIMES|2|3
+2|Mandy|Kaling|1|Grundy Hollow Wedding Chapel|3|1|Sketchy and no music|3|3
+2|Mandy|Kaling|2|Amir's Towing|1|2|Didn't work got divorced|1|2
+2|Mandy|Kaling|2|Amir's Towing|2|5|Killed a Zomie here - GOOD TIMES|2|3
+2|Mandy|Kaling|2|Amir's Towing|3|1|Sketchy and no music|3|3
+2|Mandy|Kaling|3|The Beagle Nightclub|1|2|Didn't work got divorced|1|2
+2|Mandy|Kaling|3|The Beagle Nightclub|2|5|Killed a Zomie here - GOOD TIMES|2|3
+2|Mandy|Kaling|3|The Beagle Nightclub|3|1|Sketchy and no music|3|3
+3|Angela|Jolie|1|Grundy Hollow Wedding Chapel|1|2|Didn't work got divorced|1|2
+3|Angela|Jolie|1|Grundy Hollow Wedding Chapel|2|5|Killed a Zomie here - GOOD TIMES|2|3
+3|Angela|Jolie|1|Grundy Hollow Wedding Chapel|3|1|Sketchy and no music|3|3
+3|Angela|Jolie|2|Amir's Towing|1|2|Didn't work got divorced|1|2
+3|Angela|Jolie|2|Amir's Towing|2|5|Killed a Zomie here - GOOD TIMES|2|3
+3|Angela|Jolie|2|Amir's Towing|3|1|Sketchy and no music|3|3
+3|Angela|Jolie|3|The Beagle Nightclub|1|2|Didn't work got divorced|1|2
+3|Angela|Jolie|3|The Beagle Nightclub|2|5|Killed a Zomie here - GOOD TIMES|2|3
+3|Angela|Jolie|3|The Beagle Nightclub|3|1|Sketchy and no music|3|3
+
+3.  sqlite> select users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment from reviews join users on reviews.user_id = users.id join businesses on reviews.business_id = businesses.id;
+Mandy|Kaling|Grundy Hollow Wedding Chapel|2|Didn't work got divorced
+Angela|Jolie|Amir's Towing|5|Killed a Zomie here - GOOD TIMES
+Angela|Jolie|The Beagle Nightclub|1|Sketchy and no music
+
+4.  sqlite> select users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment from reviews join users on reviews.user_id = users.id join businesses on reviews.business_id = businesses.id where name="Amir's Towing";
+Angela|Jolie|Amir's Towing|5|Killed a Zomie here - GOOD TIMES
+
+
