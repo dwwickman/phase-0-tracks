@@ -12,3 +12,12 @@ create_table_cmd = <<-SQL
 SQL
 
 db.execute(create_table_cmd)
+
+def create_todo_list(db, name, choir)
+  db.execute("INSERT INTO todo_list (name, choir) VALUES (?, ?)", [name, choir])
+end
+
+create_todo_list(db, "Sanders", "Garbage")
+create_todo_list(db, "Jimmy", "School")
+
+
