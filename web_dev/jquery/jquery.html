@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $(".test").hide();
+    });
+    $(".p_last").click(function(){
+        $("p").hide();
+});
+    $(".header").click(function(){
+        $("h1").hide();
+});
+    $("#click").click(function(){
+        $(this).hide();
+    });
+    $("h2").dblclick(function(){
+        $(this).hide();
+    });
+});
+</script>
+</head>
+<body>
+
+<h1>Heading</h1>
+
+<p class="test">Paragraph 1.</p>
+
+<p>Paragraph 2.</p>
+
+<h2>Heading 2 double click to go away</h2>
+
+<p id="click">Paragarph 3 - click me to go away</p>
+
+<button>Click me to hide first paragraph</button><br>
+<button class="p_last">click me to hide paragraphs</button><br>
+<button class="header">click me to hide header 1</button>
+
+</body>
+</html>
