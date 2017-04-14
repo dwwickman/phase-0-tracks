@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chicago Campus</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<h1>Chicago Students</h1>
+  <ul>
+    <% @chicago.each do |student| %>
+      <li><%= student['name'] %>, <%= student['age'] %>, <%= student['campus'] %></li>
+    <% end %>
+  </ul>
+
+
+</body>
+</html>
