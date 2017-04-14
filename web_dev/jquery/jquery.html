@@ -13,19 +13,30 @@ $(document).ready(function(){
     $(".header").click(function(){
         $("h1").hide();
 });
+    $("#click").click(function(){
+        $(this).hide();
+    });
+    $("h2").dblclick(function(){
+        $(this).hide();
+    });
 });
 </script>
 </head>
 <body>
 
-<h1>This is a heading</h1>
+<h1>Heading</h1>
 
-<p class="test">This is a paragraph 1.</p>
-<p>This is paragraph 2.</p>
+<p class="test">Paragraph 1.</p>
+
+<p>Paragraph 2.</p>
+
+<h2>Heading 2 double click to go away</h2>
+
+<p id="click">Paragarph 3 - click me to go away</p>
 
 <button>Click me to hide first paragraph</button><br>
 <button class="p_last">click me to hide paragraphs</button><br>
-<button class="header">click me to hide header</button>
+<button class="header">click me to hide header 1</button>
 
 </body>
 </html>
