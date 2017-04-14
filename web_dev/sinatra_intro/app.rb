@@ -12,6 +12,19 @@ get '/' do
   "#{params[:name]} is #{params[:age]} years old."
 end
 
+get '/contact' do
+  "Address:  123 street st. Street, ST"
+end
+
+get '/great_job' do
+  name = params[:name]
+  if name
+  "Good job, #{name}"
+else
+  "good job!"
+end
+end
+
 # write a GET route with
 # route parameters
 get '/about/:person' do
@@ -21,6 +34,11 @@ end
 
 get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
+end
+
+get '/:number_1/plus/:number_2' do
+  solution = params[:number_1].to_i + params[:number_2].to_i
+  "#{params[:number_1]} + #{params[:number_2]} = #{solution}"
 end
 
 # write a GET route that retrieves
@@ -44,3 +62,9 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+#Release 1
+
+#1.  Ruby on Rails, Rack
+#2.  DataMapper, ActiveRecord
+#3.  A Web stack is the collection of software required for Web development.
