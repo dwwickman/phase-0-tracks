@@ -62,3 +62,9 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+#Release 1
+
+#1.  Ruby on Rails, Rack
+#2.  DataMapper, ActiveRecord
+#3.  A Web stack is the collection of software required for Web development.
