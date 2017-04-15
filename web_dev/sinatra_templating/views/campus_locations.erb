@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Campus Locations</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<h1>Campus Locations</h1>
+<ul>
+    <% @campuses.each do |campus| %>
+      <li><%= campus['campus'] %></li>
+    <% end %>
+  </ul>
+  <p><a href="/">Home Page</a></p>
+
+</body>
+</html>
