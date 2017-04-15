@@ -24,4 +24,26 @@ post '/students' do
   redirect '/'
 end
 
+# show students from chicago on chicago page
+get '/chicago' do
+	@students = db.execute("SELECT * FROM students WHERE campus='chicago'")
+	erb :chicago
+end
+
+get '/campuses/new' do
+	erb :campuses
+end
+
+post '/campuses' do
+	campus = params['campus']
+  db.execute("INSERT INTO campuses (campus) VALUES (?)", [campus])
+  redirect '/campuses/added'
+end
+
+get '/campuses/added' do
+  @campuses = db.execute("SELECT * FROM campuses")
+  erb :campus_locations
+end
+
+
 # add static resources
